@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     responseMessagesList.add(message);
                     ResponseMessage message2 = new ResponseMessage(response,false);
                     responseMessagesList.add(message2);
-                    userImput.setText("");
+                    userImput.setText(null);
                     messageAdapter.notifyDataSetChanged();
                 }
                 return true;

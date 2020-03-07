@@ -89,6 +89,9 @@ public class PandorabotsTalkAPI {
 
 
     public String spec(String host, String botkey, String sessionid, String input) {
+        input = input.replaceAll("[^a-zA-Z0-9\\s+]", "").replaceAll(" ", "%20");
+        if (input.equals("resetbot")) sessionid = "0";
+       // input = input.replaceAll(" ", "%20");
         System.out.println("--> custid = "+sessionid);
         String spec = "";
         try {
@@ -98,11 +101,11 @@ public class PandorabotsTalkAPI {
                         botkey,
                         URLEncoder.encode(input, "UTF-8"));
             else spec =                 // re-use custid on each subsequent interaction
-                    String.format("%s?botkey=%s&input=%s&input=%s&sessionid=%s",
+                    String.format("%s?botkey=%s&input=%s&sessionid=%s",
                             "https://" + host + "/talk",
                             botkey,
-                            sessionid,
-                            input);
+                            input,
+                            sessionid);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -134,10 +137,10 @@ public class PandorabotsTalkAPI {
 
             if (n2 > n1)
                 botResponse = sraixResponse.substring(n1+"[\"".length(), n2);
-            n1 = sraixResponse.indexOf("sessionid=");
+            n1 = sraixResponse.indexOf("sessionid\":");
             if (n1 > 0) {
-                sessionid = sraixResponse.substring(n1+"sessionid=\"".length(), sraixResponse.length());
-                n2 = sessionid.indexOf("\"");
+                sessionid = sraixResponse.substring(n1+"sessionid\": ".length(), sraixResponse.length());
+                n2 = sessionid.indexOf(" ");
                 if (n2 > 0) sessionid = sessionid.substring(0, n2);
                 else sessionid = defaultCustid;
                 }
