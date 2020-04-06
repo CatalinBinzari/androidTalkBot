@@ -33,7 +33,7 @@ public class PandorabotsTalkAPI {
     public String defaultCustid = "0";
     public String sessionid = defaultCustid;
     public String responseFailed = "RESPONSE FAILED";
-    public String defaultBotKey = "UodYLeoGwXhODsz0AWhPYVyM1D6TW9laohdcbSxxA5mv3Sa85caZnxg-3SY9L1ZAV4WROq-9b3o~";
+    public String defaultBotKey = "Zkesz6_DgDSVaQ8ONDz8ezGcjY6kAciwlBPopSdaYXMI6OsO17_0bJrKmh180rob1gyBA1KdsOJp9rI_1dsWOQ~~";
     public String defaultHost = "api.pandorabots.com";
     public String askPandorabots(String input) {
         return askPandorabots(input, defaultHost, defaultBotKey);
@@ -145,11 +145,16 @@ public class PandorabotsTalkAPI {
                 else sessionid = defaultCustid;
                 }
             if (botResponse.endsWith(".")) botResponse = botResponse.substring(0, botResponse.length()-1);   // snnoying Pandorabots extra "."
+            if(botResponse.contains("<link>")){
+                botResponse=botResponse.substring(botResponse.indexOf("<url>")+"<url>".length());
+                botResponse=botResponse.replace("<\\/url><\\/link>","\n");
+                MainActivity.hasLink=true;
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        System.out.println("Bot response in pandorabotsResponse() are : "+ botResponse.toString());
-        return botResponse;
+        System.out.println("Bot response in pandorabotsResponse() are : "+ botResponse);
+        return botResponse.replace("\\n","\n").replace("\\/","/");
 
     }
 

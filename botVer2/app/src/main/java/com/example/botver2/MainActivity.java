@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     MessageAdapter messageAdapter;
     PandorabotsTalkAPI talkAPI = new PandorabotsTalkAPI();
     String response;
+    static Boolean hasLink=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //testPandorabots();
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         userImput = findViewById(R.id.userImput);
         recyclerView = findViewById(R.id.conversation);
         responseMessagesList = new ArrayList<>();
+        ResponseMessage message0 = new ResponseMessage("Hello, you can use this bot to find a star.\nType \"start\" for using bot.\nIf you want to reset session, type \"resetbot\"".toString(),false);
+        //static Boolean hasLink=true;
+        responseMessagesList.add(message0);
         messageAdapter = new MessageAdapter(responseMessagesList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         recyclerView.setAdapter(messageAdapter);

@@ -1,6 +1,7 @@
 package com.example.botver2;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,6 @@ import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.CustomViewHolder> {
     List<ResponseMessage> responseMessageList;
-
     class CustomViewHolder extends RecyclerView.ViewHolder{
         TextView textView;
         public CustomViewHolder(View itemView) {
@@ -48,6 +48,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.CustomVi
     @Override
     public void onBindViewHolder(MessageAdapter.CustomViewHolder holder, int position) {
         holder.textView.setText(responseMessageList.get(position).getTextMessage());
+        /*
+        if(MainActivity.hasLink) {
+
+          holder.textView.setText(Html.fromHtml("Here is a <a href=\"http://www.Locked.de\">link</a>"));
+          holder.textView.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
+           //MainActivity.hasLink=false;
+        }
+        */
     }
 
 
