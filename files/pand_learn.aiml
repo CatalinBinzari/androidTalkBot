@@ -1,0 +1,27 @@
+<aiml version="2.0">
+
+
+
+        
+<category><pattern>What is sun</pattern><template>I believe <formal>sun</formal> is a <formal>star</formal> of <formal>thesolarsystem</formal> category</template></category>
+
+
+        
+<category><pattern>What is sun</pattern><template>I believe <formal>sun</formal> is a <formal>star</formal> of <formal>solar</formal> category</template></category>
+
+<category><pattern>What stars we have in solar category</pattern><template>I believe in <formal>solar</formal> category we have <formal>sun</formal></template></category>
+
+
+        
+<category><pattern>What is meteorit</pattern><template>I believe <formal>meteorit</formal> is a <formal>star</formal> of <formal>solar</formal> category</template></category>
+
+<category><pattern>What stars we have in solar category</pattern><template>I believe in <formal>solar</formal> category we have <formal>meteorit</formal></template></category>
+
+
+        
+<category><pattern>What is SUN</pattern><template>I believe <formal>SUN</formal> is a <formal>STAR</formal> of <formal>TheSolarSystem</formal> category</template></category>
+
+<category><pattern>What stars we have in TheSolarSystem category</pattern><template>I believe in <formal>TheSolarSystem</formal> category we have <formal>SUN</formal></template></category>
+
+
+</aiml>

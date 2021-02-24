@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category>
+      <pattern>RESETBOT</pattern>
+      <template>The bot has been reseted.</template>
+  </category>
+  <category>
+      <pattern>HI</pattern>
+      <template><srai>SHALL WE FIND A STAR</srai></template>
+  </category>
+  <category>
+      <pattern>START</pattern>
+      <template><srai>SHALL WE FIND A STAR</srai></template>
+  </category>
+  <category>
+      <pattern>SHALL WE FIND A STAR</pattern>
+      <template>
+          You have to choose one of the categories<br/>
+          Luminosity<br/>
+          Asymptotic giant branch stars<br/>
+          Blue stragglers<br/>
+          Compact stars<br/>
+          Emission line stars<br/>
+          Extragalactic stars<br/>
+          Multiple stars<br/>
+          Or LEARN, if you want to learn the bot
+      </template>
+  </category>
+        <category>
+            <pattern>^ LEARN ^</pattern>
+            <template>
+                 Now you can learn me<br/>
+                 You have to specify star name and category<br/>
+                 Example: SUN is a STAR of TheSolarSystem category<br/>
+                 <think><set name="topic">LEARN ME</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>Multiple stars</pattern>
+            <template>What type of multiple stars do you want?<br/>
+                Double stars<br/>
+                Triple star systems
+                <think><set name="topic">MULTIPLE STARS</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>Extragalactic stars</pattern>
+            <template>What type of extragalactic stars do you want?<br/>
+                Intergalactic space stars<br/>
+                Stars in a galaxy
+                <think><set name="topic">EXTRAGALACTIC STARS</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>Emission line stars</pattern>
+            <template>What type of emission line stars do you want?<br/>
+                FS Canis Majoris variables<br/>
+                Be stars<br/>
+                Wolf Rayet stars
+                <think><set name="topic">EMISSION LINE</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>Blue stragglers</pattern>
+            <template>Theta Carinae<br/>
+                Do you want to display wikipedia page?
+                        
+            <think><set name="starname">Theta Carinae</set> <set name="topic">ANSWER</set></think>    
+            </template>
+        </category>
+        <category>
+            <pattern>ASYMPTOTIC GIANT BRANCH STARS</pattern>
+            <template>
+                Do you want variables?
+            <think><set name="topic">ASYMPTOTIC STARS</set></think>
+            </template>
+        </category>
+        <category>
+            <pattern>Compact stars</pattern>
+            <template>
+                What type of compact stars do you want?<br/>
+                Degenerate stars<br/>
+                Stellar black holes<br/>
+                X ray binaries
+            <think><set name="topic">Compact stars</set></think>
+            </template>
+        </category>
+        <category>
+             <pattern>LUMINOSITY</pattern>
+             <template>
+                What type of stars do you want?<br/>
+                Hypergiants<br/>
+                Supergiants<br/>
+                Bright giants<br/>
+                Giant stars<br/>
+                Subgiant stars<br/>
+                Subdwarfs<br/>
+                White dwarfs<br/>
+             <think><set name="topic">LUMINOSITY</set></think>
+             </template>
+        </category>
+            <topic name="LUMINOSITY">
+                <category>
+                      <pattern>RESETBOT</pattern>
+                      <template>The bot has been reseted.</template>
+                  </category>
+                <category>
+                    <pattern>*</pattern>
+                    <template><srai><star/></srai>
+                    </template>
+                </category>
+                <category>
+                        <pattern>HYPERGIANTS</pattern>
+                        <template>Choose one of the hypergiaint star<br/>
+                        A type hypergiants<br/>
+                        B type hypergiants<br/>
+                        F type hypergiants<br/>
+                        G type hypergiants<br/>
+                        K type hypergiants<br/>
+                        M type hypergiants<br/>
+                        <think><set name="topic">HYPERGIANTS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>SUPERGIANTS</pattern>
+                        <template>Choose one of the supergiant star<br/>
+                        A type supergiants<br/>
+                        Alpha Cygni variables<br/>
+                        B type supergiants<br/>
+                        F type supergiants<br/>
+                        G type supergiants<br/>
+                        K type supergiants<br/>
+                        L type supergiants<br/>
+                        M type supergiants<br/>
+                        O type supergiants<br/>
+                        <think><set name="topic">SUPERGIANTS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>BRIGHT GIANTS</pattern>
+                        <template>Choose one of the bright giant star<br/>
+                        A type bright giants<br/>
+                        B type bright giants<br/>
+                        F type bright giants<br/>
+                        G type bright giants<br/>
+                        K type bright giants<br/>
+                        M type bright giants<br/>
+                        O type bright giants<br/>
+                        <think><set name="topic">BRIGHT GIANTS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>GIANT STARS</pattern>
+                        <template>Choose one of the giant stars<br/>
+                        A type giant stars<br/>
+                        B type giant stars<br/>
+                        F type giant stars<br/>
+                        G type giant stars<br/>
+                        K type giant stars<br/>
+                        M type giant stars<br/>
+                        O type giant stars<br/>
+                        Red giants<br/>
+                        <think><set name="topic">GIANT STARS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>SUBGIANT STARS</pattern>
+                        <template>Choose one of the giant stars<br/>
+                        A type subgiant stars<br/>
+                        B type  stars<br/>
+                        F type subgiant stars<br/>
+                        G type subgiant stars<br/>
+                        K type subgiant stars<br/>
+                        M type subgiant stars<br/>
+                        O type subgiant stars<br/>
+                        Red giants<br/>
+                        <think><set name="topic">SUBGIANT STARS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>SUBDWARFS</pattern>
+                        <template>Choose one of the subdrafts<br/>
+                        B type subdwarfs<br/>
+                        G type subdwarfs<br/>
+                        K type subdwarfs<br/>
+                        L type subdwarfs<br/>
+                        M type subdwarfs<br/>
+                        O type subdwarfs<br/>
+                        <think><set name="topic">SUBDWARFS</set></think>
+                        </template>
+                </category>
+                <category>
+                        <pattern>WHITE DWARFS</pattern>
+                        <template>Choose one of the subdrafts<br/>
+                        Pulsating white dwarfs<br/>
+                        White dwarf star stubs<br/>
+                        <think><set name="topic">WHITE DWARFS</set></think>
+                        </template>
+                </category>
+                <topic name="HYPERGIANTS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>A ^</pattern>
+                        <template>Cassiopeiae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Cassiopeiae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>BP_Crucis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">BP_Crucis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>F ^</pattern>
+                        <template>IRC +10420<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">IRC +10420</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>Omicron Centauri<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Omicron Centauri</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>RW_Cephei<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">RW_Cephei</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>M ^</pattern>
+                        <template>S_Persei<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">S_Persei</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+                <topic name="SUPERGIANTS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>A ^</pattern>
+                        <template>9 Persei<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">9 Persei</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>Alpha Cygni variables</pattern>
+                        <template>Geminorum<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Geminorum</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>Eta Canis Majoris<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Eta Canis Majoris</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>F ^</pattern>
+                        <template>35 Cygni<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">35 Cygni</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>9 Pegasi<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">9 Pegasi</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>5 Lacertae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">5 Lacertae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>L ^</pattern>
+                        <template>V838 Monocerotis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">V838 Monocerotis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>M ^</pattern>
+                        <template>6 Geminorum<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">6 Geminorum</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>O ^</pattern>
+                        <template>Alpha Camelopardalis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Alpha Camelopardalis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+                <topic name="BRIGHT GIANTS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>A ^</pattern>
+                        <template>19 Aurigae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">19 Aurigae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>Epsilon Canis Majoris<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Epsilon Canis Majoris</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>F ^</pattern>
+                        <template>Delta Volantis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Delta Volantis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>46 Capricorni<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">46 Capricorni</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>Alphard<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Alphard</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>M ^</pattern>
+                        <template>Alpha Herculis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Alpha Herculis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>O ^</pattern>
+                        <template>1 Camelopardalis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">1 Camelopardalis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+                <topic name="GIANT STARS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>A ^</pattern>
+                        <template>Pi Draconis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Pi Draconis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>Kappa Aquilae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Kappa Aquilae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>F ^</pattern>
+                        <template>Delta Capricorni<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Delta Capricorni</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>Gamma Apodis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Gamma Apodis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>41 Lyncis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">41 Lyncis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>M ^</pattern>
+                        <template>R Equulei<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">R Equulei</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>O ^</pattern>
+                        <template>Theta Muscae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Theta Muscae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>Red giants</pattern>
+                        <template>Choose one of the red giant star<br/>
+                        C type stars<br/>
+                        K type bright giants<br/>
+                        K type giants<br/>
+                        M type bright giants<br/>
+                        M type giants<br/>
+                        S type stars<br/>
+                        <think><set name="topic">REDGIANTS</set></think>    
+                        </template>
+                    </category>
+                        <topic name="REDGIANTS">
+                            <category>
+                                <pattern>C ^</pattern>
+                                <template>BH Crucis<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">BH Crucis</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                            <category>
+                                <pattern>K type bright giants</pattern>
+                                <template>Pi Sculptoris<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">Pi Sculptoris</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                            <category>
+                                <pattern>K type giants</pattern>
+                                <template>51 Orionis<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">51 Orionis</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                            <category>
+                                <pattern>M type bright giants</pattern>
+                                <template>72 Leonis<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">72 Leonis</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                            <category>
+                                <pattern>M type giants</pattern>
+                                <template>ET Virginis<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">ET Virginis</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                            <category>
+                                <pattern>S ^</pattern>
+                                <template>T Ceti<br/>
+                                 Do you want to display wikipedia page?
+                                 <think><set name="starname">T Ceti</set> <set name="topic">ANSWER</set></think>    
+                                </template>
+                            </category>
+                        </topic>
+                </topic>
+                <topic name="SUBGIANT STARS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>A ^</pattern>
+                        <template>Pi Draconis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Pi Draconis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>Kappa Aquilae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Kappa Aquilae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>F ^</pattern>
+                        <template>Delta Capricorni<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Delta Capricorni</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>Gamma Apodis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Gamma Apodis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>41 Lyncis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">41 Lyncis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>O ^</pattern>
+                        <template>Theta Muscae<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Theta Muscae</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+                <topic name="SUBDWARFS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>B ^</pattern>
+                        <template>V391 Pegasi<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">V391 Pegasi</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>G ^</pattern>
+                        <template>Groombridge 1830<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Groombridge 1830</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>K ^</pattern>
+                        <template>GK Persei<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">GK Persei</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>L ^</pattern>
+                        <template>2MASS 0532+8246<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">2MASS 0532+8246</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>M ^</pattern>
+                        <template>Gliese 1062<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Gliese 1062</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>O ^</pattern>
+                        <template>LoTr 5<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">LoTr 5</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+                <topic name="WHITE DWARFS">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>Pulsating white dwarfs</pattern>
+                        <template>TY Coronae Borealis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">TY Coronae Borealis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                    <category>
+                        <pattern>White dwarf star stubs</pattern>
+                        <template>Z Chamaeleontis<br/>
+                            Do you want to display wikipedia page?
+                        
+                        <think><set name="starname">Z Chamaeleontis</set> <set name="topic">ANSWER</set></think>    
+                        </template>
+                    </category>
+                </topic>
+            </topic>
+            <topic name="COMPACT STARS">
+                <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                <category>
+                    <pattern>Degenerate stars</pattern>
+                    <template>Select the type of degenerate stars:<br/>
+                    Neutron stars<br/>
+                    Quark stars<br/>
+                    White dwarfs
+                    </template>
+                </category>
+                <category>
+                    <pattern>Neutron stars</pattern>
+                    <template>What type of neutron stars do you want?<br/>
+                    Neutron stars in fiction<br/>
+                    Pulsars<br/>
+                    Radio quiet neutron stars<br/>
+                    Rotating radio transients<br/>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Neutron stars in fiction</pattern>
+                    <template>
+                        Dragon's Egg<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">Dragon's Egg</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Pulsars</pattern>
+                    <template>What type of pulsars do you want?<br/>
+                        Magnetars<br/>
+                        Millisecond pulsars<br/>
+                        Optical pulsars<br/>
+                        Pulsar wind nebulae<br/>
+                        Rotation powered pulsars<br/>
+                        X ray pulsars<br/>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Magnetars</pattern>
+                    <template>What type of magnetars do you want?<br/>
+                    Anomalous X ray pulsars<br/>
+                    Soft gamma repeaters
+                    </template>
+                </category>
+                <category>
+                    <pattern>Anomalous X ray pulsars</pattern>
+                    <template>
+                        AXP 1E 1048 59<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">AXP 1E 1048 59</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Soft gamma repeaters</pattern>
+                    <template>
+                        SGR 0501+4516<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">SGR 0501+4516</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Millisecond pulsars</pattern>
+                    <template>
+                        SAX J1808.4−3658<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">SAX J1808.4−3658</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Optical pulsars</pattern>
+                    <template>
+                        Crab Pulsar<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">Crab Pulsar</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Pulsar wind nebulae</pattern>
+                     <template>Colossus and the Crab<br/>
+                        It exists just in fiction, do you want to display it?<br/>
+                    <think><set name="starname">Colossus and the Crab</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Rotation powered pulsars</pattern>
+                    <template>
+                        PSR B1919+21<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">PSR B1919+21</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>X ray pulsars</pattern>
+                    <template>Select X ray pulsars type:<br/>
+                    Accreting millisecond pulsars<br/>
+                    Anomalous X ray pulsars
+                    <think><set name="topic">X ray pulsars</set></think>
+                    </template>
+                </category>
+                <topic name="X ray pulsars">
+                    <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                    <category>
+                        <pattern>Accreting millisecond pulsars</pattern>
+                    <template>
+                        SAX J1808.4−3658<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">SAX J1808.4−3658</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                    </category>
+                    <category>
+                        <pattern>Anomalous X ray pulsars</pattern>
+                        <template>
+                        CXOU J164710.2−455216<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">CXOU J164710.2−455216</set> <set name="topic">ANSWER</set></think>
+                        </template>
+                    </category>
+                </topic>
+                <category>
+                    <pattern>Radio quiet neutron stars</pattern>
+                    <template>
+                        RX J0822−4300<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">RX J0822−4300</set> <set name="topic">ANSWER</set></think>
+                        </template>
+                </category>
+                <category>
+                    <pattern>Rotating radio transients</pattern>
+                    <template>
+                        RRAT J1819-1458<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">RRAT J1819-1458</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Quark stars</pattern>
+                    <template>
+                        RX J1856.5−3754<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">RX J1856.5−3754</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>White dwarfs</pattern>
+                    <template>
+                        Select white dwarfs type:<br/>
+                        Pulsating white dwarfs<br/>
+                        White dwarf star stubs
+                    </template>
+                </category>
+                <category>
+                    <pattern>Pulsating white dwarfs</pattern>
+                    <template>
+                        Ross 548<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">Ross 548</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>White dwarf star stubs</pattern>
+                    <template>
+                        MY Apodis<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">MY Apodis</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Stellar black holes</pattern>V404 Cygni
+                    <template>
+                        V404 Cygni<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">V404 Cygni</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>X ray binaries</pattern>
+                    <template>
+                        GRO J1655-40<br/>
+                        Do you want to display wikipedia page?
+                        <think><set name="starname">GRO J1655-40</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+            </topic>
+            <topic name="ASYMPTOTIC STARS">
+                 <category>
+                    <pattern>VARIABLES</pattern>
+                    <template>
+                        Select which type of variables you want:<br/>
+                        BL Herculis variables<br/>
+                        Mira variables<br/>
+                        W Virginis variables
+                    </template>
+                </category>
+                <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                <category>
+                    <pattern>YES</pattern>
+                    <template><srai>VARIABLES</srai></template>
+                </category>  
+                <category>
+                    <pattern>BL Herculis variables</pattern>
+                    <template>
+                        RT Trianguli Australis<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">RT Trianguli Australis</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>W Virginis variables</pattern>
+                    <template>
+                        RU Camelopardalis<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">RU Camelopardalis</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Mira variables</pattern>
+                    <template>
+                        T Leporis<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">T Leporis</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>NO</pattern>
+                    <template><srai>STARS</srai></template>
+                </category>
+                <category>
+                    <pattern>STARS</pattern>
+                    <template>
+                        L2 Puppis<br/>
+                        Do you want to display wikipedia page?
+                    <think><set name="starname">L2 Puppis</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                
+            </topic>
+            <topic name="EMISSION LINE">
+                <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                <category>
+                    <pattern>FS Canis Majoris variables</pattern>
+                    <template>FS Canis Majoris<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">FS Canis Majoris</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Be stars</pattern>
+                    <template>What type of be stars do you want?<br/>
+                    Gamma Cassiopeiae variable stars
+                    Lambda Eridani variables
+                    </template>
+                </category>
+                <category>
+                    <pattern>Gamma Cassiopeiae variable stars</pattern>
+                    <template>Omega Orionis<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Omega Orionis</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Lambda Eridani variables</pattern>
+                    <template>Omicron_Puppis<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Omega Orionis</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Wolf Rayet stars</pattern>
+                    <template>WR 22<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">WR 22</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+            </topic>
+            <topic name="EXTRAGALACTIC STARS">
+                <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                <category>
+                    <pattern>Intergalactic space stars</pattern>
+                    <template>HE 0437-5439<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">HE 0437-5439</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Stars in a galaxy</pattern>
+                    <template>Select one of the galaxies.<br/>
+                    HE 0437<br/>
+                    IC 3418<br/>
+                    NGC 6946<br/>
+                    Andromeda Galaxy<br/>
+                    Magellanic Cloud<br/>
+                    Triangulum Galaxy
+                    </template>
+                </category>
+                <category>
+                    <pattern>HE 0437</pattern>
+                    <template>HE 0437-5439<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">HE 0437-5439</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>IC 3418</pattern>
+                    <template>SDSS J1229+1122<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">SDSS J1229+1122</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>NGC 6946</pattern>
+                    <template>NGC 2363-V1<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">NGC 2363-V1</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Andromeda Galaxy</pattern>
+                    <template>AE Andromedae<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">AE Andromedae</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Triangulum Galaxy</pattern>
+                    <template>Romano's Star<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Romano's Star</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Magellanic Cloud</pattern>
+                    <template>Select the type:<br/>
+                    Stars in the Large Magellanic Cloud<br/>
+                    Stars in the Small Magellanic Cloud
+                    </template>
+                </category>
+                <category>
+                    <pattern>Stars in the Large Magellanic Cloud</pattern>
+                    <template>OGLE-LMC-CEP0227<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">OGLE-LMC-CEP0227</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Stars in the Small Magellanic Cloud</pattern>
+                    <template>HV 11423<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">HV 11423</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                
+            </topic>
+            <topic name="MULTIPLE STARS">
+                <category>
+                        <pattern>RESETBOT</pattern>
+                        <template>The bot has been reseted.</template>
+                    </category>
+                <category>
+                    <pattern>Double stars</pattern>
+                    <template>What type of double stars do you want?<br/>
+                        Astrometric binaries<br/>
+                        Common envelope binary stars<br/>
+                        Dwarf novae<br/>
+                        Eclipsing binaries<br/>
+                        Rotating ellipsoidal variables
+                    </template>
+                </category>
+                <category>
+                    <pattern>Astrometric binaries</pattern>
+                    <template>Rho Pegasi<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Rho Pegasi</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Common envelope binary stars</pattern>
+                    <template>W Ursae Majoris<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">W Ursae Majoris</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Dwarf novae</pattern>
+                    <template>U Geminorum<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">U Geminorum</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Rotating ellipsoidal variables</pattern>
+                    <template>Lambda Librae<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Lambda Librae</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Eclipsing binaries</pattern>
+                    <template>What type of eclipsing binaries do you want?<br/>
+                        Algol variables<br/>
+                        Beta Lyrae variables<br/>
+                        Sygnus constelation<br/>
+                        W Ursae Majoris variables
+                    </template>
+                </category>
+                <category>
+                    <pattern>Algol variables</pattern>
+                    <template>AI Phoenicis<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">AI Phoenicis</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Beta Lyrae variables</pattern>
+                    <template>Omicron Andromedae<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Omicron Andromedae</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Sygnus constelation</pattern>
+                    <template>Kepler-16<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Kepler-16</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>W Ursae Majoris variables</pattern>
+                    <template>KIC 9832227<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">KIC 9832227</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Triple star systems</pattern>
+                    <template>Choose the system you want:<br/>
+                    Gliese 667 star system<br/>
+                    HD 131399 star system<br/>
+                    Upsilon Andromedae star system
+                    </template>
+                </category>
+                <category>
+                    <pattern>Gliese 667 star system</pattern>
+                    <template>Choose the star you want:<br/>
+                    Gliese 667<br/>
+                    Gliese 667 Cb<br/>
+                    Gliese 667 Cc</template>
+                </category>
+                <category>
+                    <pattern>Gliese 667</pattern>
+                    <template>Gliese 667<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Gliese 667</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Gliese 667 Cb</pattern>
+                    <template>Gliese 667 Cb<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Gliese 667 Cb</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Gliese 667 Cc</pattern>
+                    <template>Gliese 667 Cc<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Gliese 667 Cc</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>HD 131399 star system</pattern>
+                    <template>HD 131399 Ab<br/>
+                        Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">HD 131399 Ab</set> <set name="topic">ANSWER</set></think>    
+                    </template>
+                </category>
+                <category>
+                    <pattern>Upsilon Andromedae star system</pattern>
+                    <template>Choose the star you want:<br/>
+                    Upsilon Andromedae<br/>
+                    Upsilon Andromedae b<br/>
+                    Upsilon Andromedae c</template>
+                </category>
+                <category>
+                    <pattern>Upsilon Andromedae</pattern>
+                    <template>Upsilon Andromedae<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Upsilon Andromedae</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Upsilon Andromedae b</pattern>
+                    <template>Upsilon Andromedae b<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Upsilon Andromedae b</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                <category>
+                    <pattern>Upsilon Andromedae c</pattern>
+                    <template>Upsilon Andromedae c<br/>
+                         Do you want to display wikipedia page?
+                                
+                    <think><set name="starname">Upsilon Andromedae c</set> <set name="topic">ANSWER</set></think>
+                    </template>
+                </category>
+                
+            </topic>
+                    <topic name="ANSWER">
+                    <category>
+                        <pattern>*</pattern>
+                        <template>
+                        <think><set name="rsp"><star/></set></think> 
+                        <condition name="rsp">
+                            <li value="YES"><think><set name="topic"></set></think><link><text><get name="starname"/></text><url><map name="starlist"><get name="starname"/></map></url></link><srai>SHALL WE FIND A STAR</srai></li>
+                            <li value="NO"><think><set name="topic"></set></think>Okay, now you cand find another star, choose category.<br/><srai>SHALL WE FIND A STAR</srai></li>    
+                            <li>Please type Yes or No.</li>
+                            <li value="RESETBOT"><think><set name="topic"></set></think>Okay, now you can find another star.<br/><srai>RESETBOT</srai></li>
+                        </condition>
+                        </template>
+                    </category>
+                    </topic>
+                    <topic name="LEARN ME">
+                        <category>
+                            <pattern>*</pattern>
+                            <template>
+                                Something wrong...<br/>
+                                You have to specify star name and category<br/>
+                                Example: SUN is a STAR of TheSolarSystem category<br/>
+                                After check with: What is SUN
+                                Or What stars we have in TheSolarSystem category
+                            </template>
+                        </category>
+                        <category>
+                              <pattern>* is a * of ^ category</pattern>
+                              <template>I have remembered that<br/>
+                              <learnf>
+                                  <category>
+                                      <pattern>What is <eval><star/></eval></pattern>
+                                      <template>
+                                          I believe <formal><eval><star/></eval></formal> is a <formal><eval><star index="2"></star></eval></formal> of <formal><eval><star index="3"></star></eval></formal> category
+                                      </template>
+                                  </category>
+                                  <category>
+                                      <pattern>What stars we have in <eval><star index="3"></star></eval> category</pattern>
+                                      <template>
+                                          I believe in <formal><eval><star index="3"></star></eval></formal> category we have <formal><eval><star/></eval></formal>
+                                      </template>
+                                  </category>
+                                  
+                              </learnf>
+                              </template>
+                         </category>
+                    </topic>
+
+</aiml>
